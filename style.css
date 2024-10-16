@@ -1,0 +1,47 @@
+body{
+    background: rgb(233,180,0);
+    background: linear-gradient(90deg, rgba(233,180,0,1) 0%, rgba(208,223,19,1) 31%, rgba(147,220,44,1) 51%, rgba(208,223,19,1) 83%, rgba(245,200,48,1) 100%);
+    height: 100%;
+}
+
+header{
+    height: 70px;
+    background: rgb(240,186,0);
+    background: linear-gradient(90deg, rgba(240,186,0,1) 0%, rgba(220,235,21,1) 31%, rgba(157,235,46,1) 51%, rgba(217,233,20,1) 83%, rgba(255,208,49,1) 100%);
+}
+
+.button-container{
+   a{
+    color: black;
+   }
+}
+
+.all_form{
+    background-color:rgba(144, 231, 231, 0.518);
+    border-radius: 20px;
+}
+
+.btn-primary{
+    background-color: rgba(66, 214, 214, 0.518);
+    border: 2px solid rgba(66, 214, 214, 0.518);
+}
+
+.dark{
+    background-color: black;
+}
+
+footer{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    font-size: 20px;
+    height: 72px;
+    margin-top: 68px;
+    background: rgb(240,186,0);
+    background: linear-gradient(90deg, rgba(240,186,0,1) 0%, rgba(220,235,21,1) 31%, rgba(157,235,46,1) 51%, rgba(217,233,20,1) 83%, rgba(255,208,49,1) 100%);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}

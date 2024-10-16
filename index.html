@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная 6 Ашот Папикян</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="text-center d-flex justify-content-center pt-3">
+            <h4><b>Всё для спорта!</b></h4>
+        </div>
+    </header>
+
+    <div class="container">
+        <form class="mt-5">
+            <div class="form-group mx-auto text-center w-50">
+                <label for="quantity"><b>Количество (в зависимости от опции):</b></label>
+                <input type="number" class="form-control" id="quantity" placeholder="Введите количество товара">
+            </div>
+            
+            <div class="mt-5 text-center" id="radiosContainer">
+                <label for="kurses"><b>Выберите раздел:</b></label>
+                <div class="mt-2" id="kurses">
+                    <label class="mx-2">
+                        <input type="radio" name="prodOptions" value="option1" id="option1"> Спорт.инвентарь(кол-во мячей, сеток и тп)
+                    </label>
+                    <label class="mx-2">
+                        <input type="radio" name="prodOptions" value="option2" id="option2"> Форма
+                    </label>
+                    <label class="mx-2">
+                        <input type="radio" name="prodOptions" value="option3" id="option3"> Организация выезда(дни)
+                    </label>
+                </div>
+            </div>
+                  
+            <div class="form-group w-50 mx-auto mt-4 text-center" id="product-section">
+                <label class="text" for="product" id="product-label"><b>Выбрать услугу для формы:</b></label>
+                <select class="form-control text-form" id="product">
+                    <option value="item1">Игровая форма</option>
+                    <option value="item2">Тренировочная форма</option>
+                    <option value="item3">Спортивный костюм</option>
+                </select>
+            </div>
+
+            <div class="row d-flex justify-content-center" >
+                <input type="checkbox" id="contract" name="contract">
+                <label class="pt-2 pl-1" for="contract" id="label-contract"><b>Быстрая организация (доп.услуга)</b></label>
+            </div>
+
+            <div class="mt-4 text-center">
+                <h5 class="text" id="total">Общая стоимость: 0 рублей</h5>
+            </div>
+        </form>
+    </div>
+    
+    <footer>
+        <h2>Ашот Папикян</h2>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
