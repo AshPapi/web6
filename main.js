@@ -53,10 +53,6 @@ document.addEventListener('DOMContentLoaded', function () {
     function calculateTotal() {
         let totalPrice = 0;
         const quantity = parseInt(quantityInput.value) || 0;
-        if (quantity < 0){
-            totalElement.textContent = `Общая стоимость: 0 рублей (введите полож. число)`;
-            break;
-        }
         
         // Получаем цену в зависимости от типа продукта
         let price = 0;
