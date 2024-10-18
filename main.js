@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
         contractCheckbox.style.display = 'none';
         contractLabel.style.display = 'none';
     }
-
+        
     // Меняет форму в зависимости от выбранной опции
     function updateForm() {
         const selectedProduct = document.querySelector('input[name="prodOptions"]:checked');
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 break;
         }
         
-        totalPrice = Math.abs(quantity) * price;
+        totalPrice = quantity * price;
         totalElement.textContent = `Общая стоимость: ${totalPrice} рублей`;
         console.log(`Общая стоимость: ${totalPrice}`);
     }
