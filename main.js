@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Функция для расчета общей стоимости
     function calculateTotal() {
         let totalPrice = 0;
-        const quantity = document.getElementById('quantity');
+        const quantity = parseFloat(quantityInput.value);  // Преобразуем значение к числу
             
         // Получаем цену в зависимости от типа продукта
         let price = 0;
@@ -87,9 +87,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 break;
         }
 
-        totalPrice = quantity * price;
-        totalElement.textContent = `Общая стоимость: ${totalPrice} рублей`;
-        console.log(`Общая стоимость: ${totalPrice}`);
+        // Проверка на отрицательное количество или ноль
+        if (isNaN(quantity) || quantity <= 0) {
+            totalElement.textContent = `Общая стоимость: 0 рублей (введите положительное число)`;
+            console.log("Неправильное количество");
+        } else {
+            totalPrice = quantity * price;
+            totalElement.textContent = `Общая стоимость: ${totalPrice} рублей`;
+            console.log(`Общая стоимость: ${totalPrice}`);
+        }
     }
   
     // Обработчики событий для изменений формы
