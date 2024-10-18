@@ -53,11 +53,11 @@ document.addEventListener('DOMContentLoaded', function () {
     function calculateTotal() {
         let totalPrice = 0;
         const quantity = parseInt(quantityInput.value) || 0;
-  
+        
         // Получаем цену в зависимости от типа продукта
         let price = 0;
         const selectedProduct = document.querySelector('input[name="prodOptions"]:checked');
-  
+        
         if (!selectedProduct) {
             console.log("Опция не выбрана для расчета");
             return;
@@ -86,10 +86,15 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
                 break;
         }
-        
-        totalPrice = quantity * price;
-        totalElement.textContent = `Общая стоимость: ${totalPrice} рублей`;
-        console.log(`Общая стоимость: ${totalPrice}`);
+
+        if (quantity < 0){
+            totalElement.textContent = `Общая стоимость: 0 рублей (введите полож. число)`;
+        }
+        else {
+            totalPrice = quantity * price;
+            totalElement.textContent = `Общая стоимость: ${totalPrice} рублей`;
+            console.log(`Общая стоимость: ${totalPrice}`);
+        }
     }
   
     // Обработчики событий для изменений формы
