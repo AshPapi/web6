@@ -87,15 +87,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 break;
         }
 
-        if (quantity < 0){
-            totalElement.textContent = `Общая стоимость: 0 рублей (введите полож. число)`;
-        }
-        
-        else{
-            totalPrice = quantity * price;
-            totalElement.textContent = `Общая стоимость: ${totalPrice} рублей`;
-            console.log(`Общая стоимость: ${totalPrice}`);
-        }
+        totalPrice = quantity * price;
+        totalElement.textContent = `Общая стоимость: ${totalPrice} рублей`;
+        console.log(`Общая стоимость: ${totalPrice}`);
     }
   
     // Обработчики событий для изменений формы
